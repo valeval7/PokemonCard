@@ -13,14 +13,128 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* CARD PRINCIPAL */
+.card2 {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    #fff7b0 0%,
+    #ffe066 20%,
+    #ffd700 40%,
+    #4aeaba 60%,
+    #25dcc1 80%,
+    #29a9df 100%
+  );
+  border: 3px solid #b8860b;
+  border-radius: 16px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 
+    0 8px 24px rgba(0,0,0,0.3),
+    inset 0 0 10px rgba(255,255,255,0.6);
+  z-index: 1;
+}
+.card2::selection{
+  background: transparent;
+}
+
+.card2::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  background:linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.5),
+    transparent 70%
+  );
+  opacity:0.2;
+  pointer-events:none;
+}
+
+
+/* BORDE ANIMADO OCULTO */
+.card2::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 18px;
+  background: linear-gradient(-45deg, #e81cff, #40c9ff);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* EFECTO BRILLO */
+.card2::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 20px;
+  background: linear-gradient(-45deg, #fc00ff, #00dbde);
+  filter: blur(20px);
+  z-index: -2;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* CUANDO PASAS EL CURSOR */
+.card2:hover::before {
+  opacity: 1;
+  transform: rotate(-2deg) scale(1.03);
+}
+
+.card2:hover::after {
+  opacity: 1;
+}
+
 .card {
+  position: relative;
   background: linear-gradient(160deg, #ffe066, #ffcc00, #ffd700);
   border: 3px solid #b8860b;
   border-radius: 16px;
   width: 280px;
   padding: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
+
+/* ANIMACION BORDE */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 18px;
+  background: linear-gradient(-45deg, #e81cff, #40c9ff);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 20px;
+  background: linear-gradient(-45deg, #fc00ff, #00dbde);
+  filter: blur(20px);
+  z-index: -2;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* HOVER */
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: rotate(-2deg) scale(1.03);
+}
+
+/* HEADER */
 .card2 {
   background: linear-gradient(160deg, #4da0d8, #4520db, #2c3d9e);
   border: 3px solid #60baa5;
@@ -48,6 +162,7 @@ body {
   color: #cc0000;
 }
 
+/* IMAGEN */
 .card-image-container {
   background-color: #fff9e6;
   border: 2px solid #b8860b;
@@ -66,13 +181,20 @@ body {
   object-fit: contain;
 }
 
+.card-image2 {
+  width: 300px;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* TIPO */
 .card-type {
   text-align: center;
   margin-bottom: 10px;
 }
 
 .type-badge {
-  background-color: #f7e200;
+  background: linear-gradient(135deg, #b8b8b8, #ff8ccf);
   border: 1px solid #b8860b;
   border-radius: 20px;
   padding: 3px 12px;
@@ -81,6 +203,7 @@ body {
   color: #333;
 }
 
+/* DESCRIPCION */
 .card-description {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
@@ -95,6 +218,7 @@ body {
   text-align: justify;
 }
 
+/* STATS */
 .card-stats {
   display: flex;
   justify-content: space-around;
@@ -122,6 +246,7 @@ body {
   color: #1a1a1a;
 }
 
+/* FOOTER */
 .card-footer {
   display: flex;
   justify-content: space-between;
