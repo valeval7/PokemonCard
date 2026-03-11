@@ -8,9 +8,11 @@ body {
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   min-height: 100vh;
   font-family: Arial, sans-serif;
+  gap: 40px;
+  padding: 80px 40px;
 }
 
 .card {
@@ -130,4 +132,116 @@ body {
   font-size: 14px;
   color: #b8860b;
   letter-spacing: 2px;
+}
+
+/* ── Rayquaza VMAX styles ── */
+
+.card-vmax {
+  background: linear-gradient(160deg, #0a0a1a, #0d2b0d, #1a4a1a, #0d2b0d, #0a0a1a);
+  border: 3px solid #00ff88;
+  box-shadow:
+    0 0 18px rgba(0, 255, 136, 0.5),
+    0 8px 32px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: visible;
+}
+
+.card-vmax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(0, 255, 136, 0.03) 8px,
+    rgba(0, 255, 136, 0.03) 10px
+  );
+  pointer-events: none;
+  border-radius: 13px;
+}
+
+.card-vmax .card-name {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vmax-badge {
+  font-size: 13px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffd700, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+.card-vmax .card-hp {
+  color: #ff4444;
+  font-size: 15px;
+  text-shadow: 0 0 6px rgba(255, 68, 68, 0.5);
+}
+
+.card-vmax .card-image-container {
+  background: radial-gradient(ellipse at center, #0d3320 0%, #060f06 100%);
+  border: 2px solid #00ff88;
+  box-shadow: inset 0 0 20px rgba(0, 255, 136, 0.15);
+  overflow: visible;
+  position: relative;
+}
+
+.card-vmax .card-image {
+  width: 220px;
+  height: 220px;
+  filter: drop-shadow(0 0 16px rgba(0, 255, 136, 0.8)) drop-shadow(0 -8px 24px rgba(0, 200, 100, 0.5));
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-vmax .type-badge {
+  background: linear-gradient(90deg, #0d3320, #133d13);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+}
+
+.card-vmax .card-description {
+  background-color: rgba(0, 255, 136, 0.07);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.card-vmax .card-text {
+  color: #b0ffdc;
+  font-size: 10.5px;
+}
+
+.card-vmax .card-stats {
+  background-color: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.card-vmax .stat-label {
+  color: #55bb88;
+}
+
+.card-vmax .stat-value {
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.5);
+}
+
+.card-vmax .card-number {
+  color: #55bb88;
+}
+
+.card-vmax .card-rarity {
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
 }
