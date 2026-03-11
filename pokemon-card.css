@@ -135,6 +135,14 @@ body {
 }
 
 /* HEADER */
+.card2 {
+  background: linear-gradient(160deg, #4da0d8, #4520db, #2c3d9e);
+  border: 3px solid #60baa5;
+  border-radius: 16px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -253,5 +261,126 @@ body {
 .card-rarity {
   font-size: 14px;
   color: #b8860b;
+  letter-spacing: 2px;
+}
+
+
+.card-adan {
+  background: linear-gradient(160deg, #91ff66, #00ff95, #ffd700);
+  border: 3px solid #0bb89b;
+  border-radius: 16px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+
+.card-header-adan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-name-adan {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card-hp-adan {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.card-image-container-adan {
+  background-color: #fff9e6;
+  border: 2px solid #b8860b;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.card-image-adan {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.card-type-adan {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.type-badge-adan {
+  background-color: #f7e200;
+  border: 1px solid #b8860b;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-description-adan {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.card-text-adan {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.card-stats-adan {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 8px 4px;
+}
+
+.stat-adan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-label-adan {
+  font-size: 10px;
+  color: #555;
+}
+
+.stat-value-adan {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card-footer-adan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number-adan {
+  font-size: 12px;
+  color: #555;
+}
+
+.card-rarity-adan {
+  font-size: 14px;
+  color: #67b80b;
   letter-spacing: 2px;
 }
