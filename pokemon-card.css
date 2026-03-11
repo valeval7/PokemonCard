@@ -8,9 +8,11 @@ body {
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   min-height: 100vh;
   font-family: Arial, sans-serif;
+  gap: 40px;
+  padding: 80px 40px;
 }
 
 .card {
@@ -24,8 +26,16 @@ body {
   margin: 0 10px;      
   display: flex;       
   flex-direction: column;
+    margin: 1rem;
 }
-
+.card2 {
+  background: linear-gradient(160deg, #4da0d8, #4520db, #2c3d9e);
+  border: 3px solid #60baa5;
+  border-radius: 16px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -194,4 +204,306 @@ body {
 
 .card-leon .card-rarity {
   color: #bdc3c7;
+}
+/* ── Rayquaza VMAX styles ── */
+
+.card-vmax {
+  background: linear-gradient(160deg, #0a0a1a, #0d2b0d, #1a4a1a, #0d2b0d, #0a0a1a);
+  border: 3px solid #00ff88;
+  box-shadow:
+    0 0 18px rgba(0, 255, 136, 0.5),
+    0 8px 32px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: visible;
+}
+
+.card-vmax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(0, 255, 136, 0.03) 8px,
+    rgba(0, 255, 136, 0.03) 10px
+  );
+  pointer-events: none;
+  border-radius: 13px;
+}
+
+.card-vmax .card-name {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vmax-badge {
+  font-size: 13px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffd700, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+.card-vmax .card-hp {
+  color: #ff4444;
+  font-size: 15px;
+  text-shadow: 0 0 6px rgba(255, 68, 68, 0.5);
+}
+
+.card-vmax .card-image-container {
+  background: radial-gradient(ellipse at center, #0d3320 0%, #060f06 100%);
+  border: 2px solid #00ff88;
+  box-shadow: inset 0 0 20px rgba(0, 255, 136, 0.15);
+  overflow: visible;
+  position: relative;
+}
+
+.card-vmax .card-image {
+  width: 220px;
+  height: 220px;
+  filter: drop-shadow(0 0 16px rgba(0, 255, 136, 0.8)) drop-shadow(0 -8px 24px rgba(0, 200, 100, 0.5));
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-vmax .type-badge {
+  background: linear-gradient(90deg, #0d3320, #133d13);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+}
+
+.card-vmax .card-description {
+  background-color: rgba(0, 255, 136, 0.07);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.card-vmax .card-text {
+  color: #b0ffdc;
+  font-size: 10.5px;
+}
+
+.card-vmax .card-stats {
+  background-color: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.card-vmax .stat-label {
+  color: #55bb88;
+}
+
+.card-vmax .stat-value {
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.5);
+}
+
+.card-vmax .card-number {
+  color: #55bb88;
+}
+
+.card-vmax .card-rarity {
+  color: #00ff88;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+}
+/* CÓDIGO CSS para Lucario. */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Exo+2:wght@300;400;600&display=swap');
+
+:root {
+    --aura-blue: #1a4b8c;
+    --aura-light: #4d8fe0;
+    --steel-gray: #7a8fa6;
+    --steel-light: #c5d3e0;
+    --gold-accent: #d4a827;
+    --dark-bg: #0d1b2e;
+    --card-bg: #111e30;
+    --text-light: #e8f0fa;
+    --text-muted: #8aa4c8;
+}
+
+.lucario-card {
+    width: 300px;
+    background: linear-gradient(160deg, #0d1b2e 0%, #1a2f4a 50%, #0d1b2e 100%);
+    border: 2px solid var(--aura-blue);
+    border-radius: 16px;
+    padding: 16px;
+    font-family: 'Exo 2', sans-serif;
+    color: var(--text-light);
+    box-shadow:
+            0 0 20px rgba(77, 143, 224, 0.4),
+            0 0 60px rgba(26, 75, 140, 0.2),
+            inset 0 0 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.lucario-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 60% 40%, rgba(77, 143, 224, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.lucario-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lucario-card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--aura-light);
+    text-shadow: 0 0 12px rgba(77, 143, 224, 0.7);
+    letter-spacing: 2px;
+}
+
+.lucario-card-hp {
+    background: linear-gradient(135deg, var(--aura-blue), var(--steel-gray));
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: 1px solid var(--aura-light);
+}
+
+.lucario-card-image-container {
+    background: radial-gradient(ellipse at center, rgba(77, 143, 224, 0.2) 0%, rgba(13, 27, 46, 0.8) 70%);
+    border: 1px solid rgba(77, 143, 224, 0.3);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    min-height: 120px;
+    position: relative;
+}
+
+.lucario-card-image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--aura-light), transparent);
+}
+
+.lucario-card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 16px rgba(77, 143, 224, 0.9));
+    image-rendering: pixelated;
+}
+
+.lucario-card-type {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.lucario-type-badge {
+    background: linear-gradient(135deg, rgba(26, 75, 140, 0.6), rgba(122, 143, 166, 0.4));
+    border: 1px solid rgba(77, 143, 224, 0.5);
+    color: var(--steel-light);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.lucario-card-description {
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 2px solid var(--aura-blue);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+}
+
+.lucario-card-text {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+}
+
+.lucario-card-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.lucario-stat {
+    flex: 1;
+    background: linear-gradient(180deg, rgba(26, 75, 140, 0.3), rgba(13, 27, 46, 0.5));
+    border: 1px solid rgba(77, 143, 224, 0.25);
+    border-radius: 10px;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.lucario-stat-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lucario-stat-value {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--aura-light);
+    text-shadow: 0 0 8px rgba(77, 143, 224, 0.6);
+}
+
+.lucario-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(77, 143, 224, 0.2);
+}
+
+.lucario-card-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.lucario-card-rarity {
+    color: var(--gold-accent);
+    font-size: 0.85rem;
+    text-shadow: 0 0 8px rgba(212, 168, 39, 0.6);
+    letter-spacing: 2px;
 }
