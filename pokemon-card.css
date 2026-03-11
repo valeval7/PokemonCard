@@ -21,7 +21,14 @@ body {
   padding: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
-
+.card2 {
+  background: linear-gradient(160deg, #4da0d8, #4520db, #2c3d9e);
+  border: 3px solid #60baa5;
+  border-radius: 16px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -136,6 +143,9 @@ body {
 .dark-card {
   background: linear-gradient(160deg, #998777, #383116, #d4a261);
   border: 3px solid #2e2205;
+.card-adan {
+  background: linear-gradient(160deg, #91ff66, #00ff95, #ffd700);
+  border: 3px solid #0bb89b;
   border-radius: 16px;
   width: 280px;
   padding: 16px;
@@ -143,6 +153,10 @@ body {
 }
 
 .dark-card-header {
+  margin: 1rem;
+}
+
+.card-header-adan {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,6 +170,13 @@ body {
 }
 
 .dark-card-hp {
+.card-name-adan {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card-hp-adan {
   font-size: 14px;
   font-weight: bold;
   color: #cc0000;
@@ -163,6 +184,8 @@ body {
 
 .dark-card-image-container {
   background-color: #352115;
+.card-image-container-adan {
+  background-color: #fff9e6;
   border: 2px solid #b8860b;
   border-radius: 10px;
   display: flex;
@@ -174,12 +197,14 @@ body {
 }
 
 .dark-card-image {
+.card-image-adan {
   width: 150px;
   height: 150px;
   object-fit: contain;
 }
 
 .dark-card-type {
+.card-type-adan {
   text-align: center;
   margin-bottom: 10px;
 }
@@ -187,6 +212,9 @@ body {
 .dark-type-badge {
   background-color: #5c2c00;
   border: 1px solid #360d00;
+.type-badge-adan {
+  background-color: #f7e200;
+  border: 1px solid #b8860b;
   border-radius: 20px;
   padding: 3px 12px;
   font-size: 12px;
@@ -196,6 +224,11 @@ body {
 
 .dark-card-description {
   background-color: rgba(99, 99, 99, 0.5);
+  color: #333;
+}
+
+.card-description-adan {
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 12px;
@@ -213,11 +246,24 @@ body {
   justify-content: space-around;
   margin-bottom: 12px;
   background-color: rgba(255, 255, 255, 0.dark-4);
+.card-text-adan {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.card-stats-adan {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   padding: 8px 4px;
 }
 
 .dark-stat {
+.stat-adan {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,6 +282,18 @@ body {
 }
 
 .dark-card-footer {
+.stat-label-adan {
+  font-size: 10px;
+  color: #555;
+}
+
+.stat-value-adan {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card-footer-adan {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -253,3 +311,13 @@ body {
 }
 
 
+.card-number-adan {
+  font-size: 12px;
+  color: #555;
+}
+
+.card-rarity-adan {
+  font-size: 14px;
+  color: #67b80b;
+  letter-spacing: 2px;
+}
